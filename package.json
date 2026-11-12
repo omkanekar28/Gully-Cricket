@@ -1,0 +1,9 @@
+{
+  "name": "gully-cricket-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix src/2.0.0 run dev",
+    "build": "npm --prefix src/2.0.0 run build",
+    "preview": "npm --prefix src/2.0.0 run preview"
+  }
+}

@@ -1,0 +1,175 @@
+***** GULLY CRICKET RULES *****
+
+=== 1. MATCH FORMAT & GAME SETUP ===
+- Game Mode: Player vs AI (Player manages & controls Team A, AI manages & controls Team B).
+- Match Setup Flow (in order):
+    i. Batting or Bowling choice (Toss / Selection)
+    ii. Number of overs (3, 4, or 5 overs)
+    iii. Team size selection:
+         - Min players: equal to number of overs (e.g. 3, 4, 5)
+         - Max players: up to 7 players per team
+    iv. Team Selection & Character Draft Screen:
+         - 3-Column Draft Arena:
+           * Left Column: Your Team (Team A) Squad card with live pick count and drafted player tags.
+           * Center Spotlight: Active character card featuring an interactive live 3D Stick-Figure avatar on a rotating pedestal, dynamic nameplate with Rage badge, visual stat bars (Batting, Bowling, Fielding on 0-10 scale), and lock-in button.
+           * Right Column: CPU Team (Team B) Squad card with pick count and roster tags.
+         - 20 Roster Grid:
+           * Arranged in a 5-column x 4-row fighter grid with custom player icons, names, and stat previews.
+           * Mouse Hover: Hovering any fighter cell immediately highlights them, updates the spotlight stat bars, and switches the 3D model's shirt, pants, and skin colors.
+           * Keyboard Arrows & WASD: Full directional grid navigation (Up/Down/Left/Right or W/A/S/D) smoothly moves the cursor and scrolls cells into view.
+         - Lock-in Mechanics (Click or Space / Enter):
+           * Pressing Space, Enter, or clicking locks in the currently highlighted fighter for the active team.
+           * A red "LOCKED! 🔒" stamp appears over the 3D preview card.
+           * Plays one of 4 hilarious, procedurally animated 3D lock-in celebration animations at random:
+             1. 🎸 Rockstar Air-Guitar Strum: Batsman tilts back into power stance, holds bat horizontally like a Fender Stratocaster, strums frantically across the blade, headbangs, and stomps right foot!
+             2. 💪 Muscle Flex & Gully Dab: Bicep muscle-flex with chest puffed out, followed by a lightning-fast explosive street gully dab with face tucked into elbow crook and bat pointing high diagonally to the sky!
+             3. 🕺 Bhangra Twirl & Balle Balle: Arms raised high in bhangra celebration with wrist twitches, high knee marching kicks, and a full 360-degree victory pirouette!
+             4. 🎩 Bat-Flip Fumble & Swag Recovery: Batsman tosses the bat upward, looks up in sheer panic waving arms wildly, fumbles and catches it just in time under the arm, then smoothly adjusts collar and crosses arms with a confident smirk ("All calculated").
+         - Alternating Turns & AI Opponent:
+           * Player locks in first, then CPU AI takes their turn with a short deliberation pause, locks their pick with a funny 3D animation, and returns turn to the player.
+           * Once both teams reach the selected team size, "⚔️ SQUADS READY!" activates the "Proceed to Arena ➔" button.
+    v. Batting Order / Lineup:
+         - Batting team chooses who to send out first.
+         - Batsman stays on strike until dismissed; next batsman walks in when a wicket falls.
+    vi. Both innings played:
+         - Innings 1: Team 1 bats and sets target.
+         - Innings 2: Team 2 chases; must score (Target + 1) to win.
+         - Innings ends when either all overs are bowled OR the team is All Out (all wickets fall).
+    vii. Trial Ball Option:
+         - Toggleable option on setup.
+         - If enabled, strictly for the first ball of each innings only (warm-up ball, no runs/wickets counted).
+
+=== 2. BOWLING RULES ===
+- Style: Underarm bowling only!
+- Run-up: Standing delivery only!
+- Mechanics:
+    i. Strictly one-bounce bowling only.
+    ii. Wides:
+        - Ball passes too far on off side or leg side.
+        - Penalty: +1 run to batting team, ball must be re-bowled.
+        - Cannot be a wide if the batsman plays/hits at it.
+    iii. No-Balls:
+        - Ball that does not bounce and reaches batsman above knee-height.
+        - Penalty: +1 run to batting team, ball must be re-bowled.
+        - Cannot be a no-ball if played.
+    iv. Dead-Balls:
+        - Ball bounces more than once before reaching the stumps.
+        - Batsman can hit the ball as usual.
+        - After contact, the BATTING TEAM EXCLUSIVELY gets a 3-second reaction window to press the 'Call Dead' hotkey.
+        - The bowling team cannot call dead-ball (they bowled the delivery).
+        - If pressed by batting team: Ball is declared dead, no runs/wickets, re-bowled.
+        - If not pressed: Outcome and runs scored stand.
+    v. Ball Delivery Types:
+        a) Flat (Low risk, flat skidding trajectory, good for low bowling stat players)
+        b) Lofted (Low risk, high dipping arc, safe but susceptible to popping up)
+        c) Leg-Spin (High risk, sharp break towards off-side upon landing; requires compensation)
+        d) Off-Spin (High risk, sharp break towards leg-side upon landing; requires compensation)
+    vi. Pitch Drop Aiming (Line & Length):
+        - Bowlers actively select where the first drop/bounce will pitch on the concrete pavers:
+          * Line: Outside Off, Middle Stump, Leg Stump.
+          * Length: Short Pitch (high bounce), Good Length (ideal channel), Full Yorker (stump target).
+          * Aiming can be adjusted by clicking/dragging directly on the 3D pitch pavers, using Arrow/WASD keys, or clicking on-screen chips.
+        - Spin Break & Wide Risk:
+          * Because spin turns the ball upon landing, dropping a Leg-Spin delivery in the middle without compensating will break past the wide line into a WIDE.
+          * Strategic bowlers drop Leg-Spin in the off-side channel so it curls back directly into the stumps!
+    vii. Release Speed & Timing Slider:
+        - Oscillating speed meter active during bowler run-up.
+        - Space / Enter / Click locks the needle release timing (Action 1):
+          * Sweet Spot (Center Green Zone): Optimal speed, maximum dip, and pinpoint accuracy.
+          * Left (Slow / Float): Under-powered release, soft floater with high hang time.
+          * Right (Fast / Rushed): Over-cooked release, skids flatter and faster.
+        - Delivery Stride Delay (~800ms between Action 1 & Action 2):
+          * After the player stops the slider, a deliberate ~800ms anticipation delay allows the player's eyes to register the locked speed result and naturally look up from the bottom slider to the pitch.
+          * During this delay, the bowler completes their delivery stride and underarm arm swing before the ball is released (Action 2).
+    viii. Bowler Skill & Fatigue Deviations:
+        - Bowler Skill (0-10) directly controls the width of the green sweet spot and needle stability.
+        - Skill and fatigue introduce natural aiming deviation (jitter) in line and length.
+        - Repeated spin deliveries build Bowler Fatigue, widening error risk.
+    ix. Bowler Rotation:
+        - Per over, the bowling team must choose a different bowler from the squad.
+        - No bowler can bowl more than once in a match.
+
+=== 3. FIELDING & PLACEMENT RULES ===
+- Over-by-Over Placement:
+    - The bowling/fielding team's captain decides their fielding setup before each over.
+    - When User is bowling: Player chooses between Balanced, Wall Trap (Close-In), or Deep Defense.
+    - When Opponent is bowling: CPU captain autonomously and randomly picks a tactical fielding preset per over (Balanced, Wall Trap, or Deep Defense) without player intervention.
+- Collision-Based Interceptions:
+    - Fielders only attempt to catch or stop the ball if the ball trajectory collides with their hitbox.
+    - Batsmen must aim for gaps between fielders.
+- Fielding Stat Impact (0-10):
+    - High-skill fielders react faster and reliably hold onto catches.
+    - Low-skill fielders have slower reaction times (especially when placed close to batsman) and higher chance of dropping catches.
+
+=== 4. DISMISSALS (WAYS TO GET OUT) ===
+- Boundary Aerial Out:
+    - Any hit that goes directly over the boundary walls (side or front) is OUT (classic "six = out & lost ball").
+- Direct Wall Hit Out:
+    - Hitting the front wall or side boundary walls directly on the fly without bouncing on the ground is OUT!
+    - To score runs off the walls (1, 2, or 4 runs), the ball MUST bounce on the ground at least once before touching the wall.
+- Catches:
+    - Direct catch in the air OR one-drop (one-bounce) catch taken by fielders.
+- Bowled / Wicket:
+    - Ball hits stumps directly or deflects onto stumps.
+- No Running:
+    - No run-outs or stumpings since running between wickets is disabled.
+
+=== 5. BATTING & SCORING RULES ===
+- No Running Between Wickets.
+- Scoring Zones:
+    - Hit ball safely into gap (not out, doesn't hit walls): 1 run.
+    - Ball touches closer half of side wall (after 1+ bounce): 1 run.
+    - Ball touches further half of side wall (after 1+ bounce): 2 runs.
+    - Ball touches front wall (after 1+ bounce): 4 runs!
+    - Direct hit on any wall on the full (0 bounces): OUT!
+    - Ball clears boundary on the fly: OUT (0 runs).
+- Batting Controls & Pre-Delivery Prep:
+    i. 10-Second Pre-Delivery Window:
+       - 10-second countdown before each ball to move around the crease (WASD) and adjust Shot Power (20% to 100%).
+       - Can press "Ready / Bowl Now" (Space) to skip the timer and bowl immediately.
+    ii. Directional Arrow Shots & Dynamic 3D Batting Animations:
+       - Every shot features a dedicated, unique 3D joint animation:
+         * Up Arrow (▲): Straight Drive (high leading elbow, vertical bat drive down the V).
+         * Up + Left Arrow (▲ + ◄): Diagonal Off-Drive / Cover Drive (front foot lunge into off-side, chest angled to covers, bat sweeping through covers).
+         * Up + Right Arrow (▲ + ►): Diagonal On-Drive / Mid-Wicket Flick (torso inward rotation, wrists whipping across the chest to mid-wicket).
+         * Left Arrow (◄): Off-Side Touch / Late Cut (backfoot weight transfer, open blade guiding softly to third man / off wall).
+         * Right Arrow (►): Leg-Side Touch / Fine Leg Glance (pad deflection, torso turning with delivery, bat angled to leg wall).
+         * Power / Lofted Drive (>70% power / Risky / Rage): Powerful upward lofted arc with high head-up follow-through over the shoulder.
+    iii. Untimed Forward Defensive Block (Down Arrow ▼ / S):
+       - No Timing Required: Does not use the timing ring. From the moment pressed after delivery release till the end of the ball, the batsman continuously holds the solid forward defensive posture.
+       - Line Check:
+         * If the ball is NOT in the same line as the batsman (|ball.x - bat.x| > 0.40m), the bat does not make contact and the ball passes untouched.
+         * Outcome depends on line and length: wide ball (+1 run extra) if outside wide line, clean bowled if on stumps, or dot ball if safe.
+       - Height Check (When Ball is In Line):
+         * High Ball Trap (Lofted delivery, ball.y > 0.62m, or steep bounce): Ball strikes the splice/top edge of the upright bat and loops up softly into the air for an EASY POP-UP CATCH!
+         * Good / Normal Height: Solid dead-bat push into pavers for a safe 1 run single and recovers 25% fatigue (-25% fatigue).
+    iv. Batter Fatigue & Consequences:
+       - What Builds Fatigue: Repeated max-power drives (>70% power slider) and consecutive aggressive hits (+20% fatigue per swing).
+       - What Recovers Fatigue: Playing Safe Blocks (-25% fatigue) or leaving dot balls (-10% fatigue).
+       - The 4 Penalties of High Batter Fatigue:
+         1. Mistimed Skyer / Slices (Aerial Out): Tired swings slice upward instead of drilling flat. Because direct wall hits and direct catches are OUT, high fatigue makes power drives lethal.
+         2. Slower Downswing Lag: High fatigue adds up to +0.08s swing delay, making it harder to time fast flat deliveries and increasing clean bowled risk.
+         3. Shot Deviation: Directional drives lose precision, drifting off-target towards fielders.
+         4. Rage Mode Catalyst: For players with the Rage Trait (Vicky, Bunty, Guddu), max fatigue combined with consecutive failed shots triggers Rage Mode (extreme rocket power or instant aerial out).
+
+=== 6. UI & BROADCAST PRESENTATION ===
+- TV Broadcast-Style Overlay:
+    - Scoreboard banner (Current score, Target, Overs, Wickets, Required Run Rate / Current Run Rate).
+    - Current Batsman & Bowler nameplates with stats.
+    - Bowler Fatigue Bar & Batter Fatigue Bar.
+    - Rage Mode visual indicator (fire/electric glow when active).
+    - 'Call Dead' interactive button / hotkey prompt with 3-second countdown timer.
+    - Pitch radar / mini-map showing fielder positions, gaps, and wall scoring zones.
+    - Real-time Background Vehicles Toggle:
+      * Quick-toggle button in HUD (`[🚗 Cars: ON/OFF]`) or keyboard hotkey `[V]`.
+      * Displays/hides the dark red Ford Endeavour and white Suzuki Baleno outside the 4 boundary.
+      * Interactive car alarm triggers with flashing amber hazard lights and siren audio if boundary hits slam into either vehicle!
+
+=== 7. FUNNY GULLY EMOTIONS & CELEBRATIONS ===
+- Occasional comic celebrations & tantrums (25% chance per occurrence):
+    i. Front Wall Four Celebration Dance (25% chance on 4 runs):
+       - Batsman breaks into an energetic Bhangra victory dance, raising the bat high with one hand, pumping arms, kicking knees, and grooving on the pitch.
+    ii. Dismissal Bat Smash Tantrum (25% chance on Wicket / Out):
+       - Batsman stares up in shock, furiously winds up with both hands overhead, and violently slams the bat into the concrete pavers, snapping the bat blade at an angle before dropping to his knees in despair.
+    iii. Dropped Catch Fielder Agony (25% chance on Dropped Catch):
+       - The culpable fielder clutches both hands to his head in disbelief and jumps up and down stomping the pavers in agony, while the bowler shakes his head and kicks the pitch in frustration.

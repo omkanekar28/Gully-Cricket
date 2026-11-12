@@ -1,0 +1,62 @@
+# Gully Cricket Game - Project Roadmap
+
+## Vision
+A standalone, playable HTML/JS game replicating our real-life office break gully cricket matches, featuring realistic venue obstacles, personalized player avatars, accurate house rules, and rich audio/visual flair.
+
+---
+
+## Phase 1: Core Mechanics & 3D Engine (COMPLETED ✅)
+- [x] Received detailed gully cricket rules from user (scoring, outs, bowling style, obstacles).
+- [x] Transformed into realistic 3D perspective camera engine matching Boca de Vaca reference:
+  - [x] Three.js 3D WebGL renderer with soft shadows, sunlight, and fog.
+  - [x] Jointed 3D stick-figures (`Human` class with torso, head, limbs, joints, wooden bat).
+  - [x] Dynamic 3D cameras: Bat Cam (behind batsman), Bowl Cam, Side Cam, High Cam (`[C]` toggle).
+  - [x] Underarm, standing delivery only with realistic one-bounce physics and ball elevation shadow.
+  - [x] Extras: Wides, knee-height No-balls, and double-bounce Dead-balls.
+  - [x] Interactive 3-second 'Call Dead' hotkey `[D]` / button reaction window.
+  - [x] Delivery types: Flat, Lofted, Leg-Spin, Off-Spin with Bowler Fatigue compounding error chance.
+  - [x] Interactive Pitch Drop Aiming (Line & Length) with 3D paver dragging, arrow keys, and spin-break compensation (middle drop turns wide, off-side drop curls into stumps).
+  - [x] Speed & Timing Slider (oscillating needle with sweet-spot release timing, slow/float, fast/rushed, and skill-based error deviation).
+  - [x] Safe Tap (1 run, low bounce) vs Power Drive (wall boundary shots vs aerial out risk).
+  - [x] Batter Fatigue meter & Rage Mode for designated players (double-edged sword chaos).
+  - [x] 3D Boundary walls: Front wall = 4 runs, Far side wall = 2 runs, Closer side wall = 1 run (requires 1+ ground bounce).
+  - [x] Dismissals: Direct hit on any boundary wall (no bounce) = OUT, direct hit over boundary walls = OUT, direct catch or one-drop catch, clean bowled.
+  - [x] Mortal Kombat style character selection grid with 20 dummy players and alternating draft.
+  - [x] Over-by-over bowler rotation (each bowler bowls only once per match) and fielding presets.
+  - [x] TV Broadcast HUD with live scores, overs, wickets, ball-tracker dots, and broadcast toasts.
+  - [x] Dual-device controls: Keyboard hotkeys + clickable buttons / touch on mobile.
+
+## Phase 2: Venue & Arena Realism (COMPLETED ✅)
+- [x] Received & analyzed IRL arena reference photos (Boca De Vaca spring pavilion, walls, cars, trees, windows, pitch surface).
+- [x] Recreated the environment layout accurately:
+  - [x] Pitch surface texture: Interlocking terracotta and buff stone paver tiles with mossy mortar joints matching IRL Boca De Vaca lane.
+  - [x] Boundary walls & fences: Goan red laterite retaining walls with beveled stone coping ledges and clear stenciled boundary rules.
+  - [x] Batsman's background: The historic Boca De Vaca Spring Pavilion with Portuguese cream facade, twin owl-eye portals, copper fountain basin, water spout, cow (Nandi) relief medallion, blue-yellow signboard, black iron security gate, white railing barrier, guard booth, and lush tropical jungle hillside.
+  - [x] Side walls background: Goan colonial building with balconies and green shuttered windows, plus swaying procedural tropical palm trees.
+  - [x] Parked vehicles: Accurately modeled Dark Red Ford Endeavour SUV and Arctic White Suzuki Baleno hatchback:
+    - [x] Moved forward right to the 4 boundary curb with zero railing obstruction (100% visible from tires to roof).
+    - [x] Angled mostly bottom-facing (towards batsman) with subtle left rotation (~12°-14°) to showcase massive front logos, headlights & side depth.
+    - [x] Ford Endeavour headlights: Signature glowing C-shaped LED DRL light guides wrapping around dual bi-LED projector headlights.
+    - [x] Suzuki Baleno headlights: Swept-back aerodynamic headlights with signature NEXA 3-block crystal LED DRL jewel cubes.
+    - [x] Massive logos on front grilles/bumpers: High-resolution Ford Royal Blue oval script badge and Suzuki chrome geometric "S" emblem.
+  - [x] Interactive collision zones: Car alarm system with flashing amber hazard lights, audio horn siren, and toast notifications when boundary hits strike the vehicles.
+  - [x] In-game toggle: Real-time vehicles toggle button in top HUD (`Cars: ON / OFF`) and keyboard hotkey `[V]`.
+  - [x] Realistic lighting: Sunny tropical Goan afternoon lighting with soft PCF shadows and bright fluorescent neon-yellow plastic stumps.
+
+## Phase 3: Player Avatars & Personalization
+- [x] Receive player photos/videos (names, batting/bowling stances, outfits, hairstyles):
+  - [x] Processed all 16 player photos into 160x160 retro pixel-art portraits (Amrit, Darren, Maverick, Melroy, Neeraj, Nihal, Om, Prabhakar, Pradeep, Prasad, Ralph, Sahil, Shubham, Sweenal, Sweeten, Travis).
+- [x] Implement custom character sprites & animations:
+  - [x] Distinct bowler actions (fast, spinner, chucker, unique run-ups).
+  - [x] Batter stances, shot animations, celebrations, and run-out reactions (air guitar, dab, bhangra twirl, bat-break, fielder rage).
+  - [x] Squad select / lineup roster with player stats or signature quirks:
+    - [x] 4x4 Mortal Kombat fighter selection grid with real player pixel portraits and balanced stats.
+    - [x] Character spotlight card with animated 3D model, tagline, role, and custom body build proportions.
+    - [x] In-game top scoreboard HUD mini-portraits for active batsman and bowler.
+    - [x] Match preparation lineup modal with player thumbnails and taglines.
+  - [x] Rock Audience & Spectators outside boundary wall:
+    - [x] Big faceted Goan boulder with sitting ledge and standing plateau outside left wall.
+    - [x] 4 audience stick figures (Sitting 1, Sitting 2, Standing 1, Standing 2).
+    - [x] In-game toggles: Both Cars and Audience are disabled by default on startup, toggleable anytime via top HUD buttons (`Cars: OFF/ON`, `Audience: OFF/ON`) or hotkeys `[V]` and `[B]`.
+    - [x] Reactive funny emotes on match events: clapping & victory jumps on 4s, hilarious arguing/fighting between Standing 1 & 2 on wickets/dropped catches, facepalming and laughing from Sitting 1 & 2, and ducking/pointing on car alarms.
+    - [x] Match-aware Batsman AI: When the target is close or wickets in hand are low with many balls remaining, batsmen shift into defensive/anchor mode (soft ground pushes, forward defense on stumps, controlled power avoiding direct wall outs).
